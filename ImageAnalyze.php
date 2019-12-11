@@ -74,9 +74,9 @@ if (isset($_POST['submit'])) {
 </script>
  
 <h1>Analyze image:</h1>
-Tekan tombol <strong>Analyze image</strong> untuk memulai proses analisis gambar.
+Press Button <strong>Analyze image</strong> to start analyze the image.
 <br><br>
-URL gambar:
+URL Picture:
 <input type="text" name="inputImage" id="inputImage"
     value="<?php echo $url ?>" readonly />
 <button id="analyze_btn" onclick="processImage()">Analyze image</button>
