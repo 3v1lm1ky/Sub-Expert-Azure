@@ -13,15 +13,12 @@ $containerName = "blockblobshsgmut";
 
 
 
-// Create blob client.
 $blobClient = BlobRestProxy::createBlobService($connectionString);
 
 if (isset($_POST['submit'])) {
 	$fileToUpload = strtolower($_FILES["fileToUpload"]["name"]);
 	$content = fopen($_FILES["fileToUpload"]["tmp_name"], "r");
-	// echo fread($content, filesize($fileToUpload));
 	$blobClient->createBlockBlob($containerName, $fileToUpload, $content);
-	header("Location: index.php");
 	
 }
 
@@ -33,17 +30,12 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 <!DOCTYPE html>
 <html>
  <head>
- <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
  
 
     <title>Blob Uploader</title>
 
   </head>
 <body>
-	<main role="main" class="container">
     		<div class="starter-template"> <br>
         		<h1 align="center">Blob Uploader</h1><br>
 				<p class="lead">Please choose a image. and then click button <b>Upload</b>
