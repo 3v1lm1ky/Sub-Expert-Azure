@@ -40,7 +40,6 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
     		 <br>
         		<h1 align="center">Blob Uploader</h1><br>
 				<p class="lead">Please choose a image. and then click button <b>Upload</b>
-				<span class="border-top my-3"></span>
 			
 		<div>
 			<form class="d-flex justify-content-lefr" action="index.php" method="post" enctype="multipart/form-data">
