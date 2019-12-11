@@ -11,6 +11,8 @@ use MicrosoftAzure\Storage\Blob\Models\PublicAccessType;
 $connectionString = "DefaultEndpointsProtocol=https;AccountName=mactologywebapp;AccountKey=v4oZVbmnbqmLmBgiDnZGAI5jmdybXQninkBFWBPH44U+Y5xwoWzgRSLRYrkG6g/GnMqaxGeNpjPj/UupPN+iDw==";
 $containerName = "blockblobshsgmut";
 
+
+
 $blobClient = BlobRestProxy::createBlobService($connectionString);
 
 if (isset($_POST['submit'])) {
@@ -40,7 +42,7 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 				<span class="border-top my-3"></span>
 			</div>
 		<div class="mt-4 mb-2">
-			<form class="d-flex justify-content-lefr" action="index.php" method="post" >
+			<form class="d-flex justify-content-lefr" action="index.php" method="post" enctype="multipart/form-data">
 				<input type="file" name="fileToUpload" required="">
 				<input type="submit" name="submit" value="Upload">
 			</form>
@@ -57,6 +59,7 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 					<th>Action</th>
 				</tr>
 			</thead>
+			<tbody>
 				<?php
 				do {
 					foreach ($result->getBlobs() as $blob)
@@ -77,6 +80,7 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 					$listBlobsOptions->setContinuationToken($result->getContinuationToken());
 				} while($result->getContinuationToken());
 				?>
+			</tbody>
 		</table>
 
 	</div>
