@@ -26,9 +26,10 @@ if (isset($_POST['submit'])) {
 <script type="text/javascript">
     function processImage() {
         
-        var subscriptionKey = "7334d89b99a84e6792d4c2a943b89512";
+        var subscriptionKey = "26a26d06a0e54537b640d6c034b0d70c";
  
-        var uriBase = "https://mactologyvision.cognitiveservices.azure.com/vision/v2.0/analyze";
+        var uriBase =
+            "https://mactologyvision.cognitiveservices.azure.com/vision/v2.0/analyze";
  
         var params = {
             "visualFeatures": "Categories,Description,Color",
@@ -73,9 +74,9 @@ if (isset($_POST['submit'])) {
 </script>
  
 <h1>Analyze image:</h1>
-Press Button <strong>Analyze image</strong> to start analyze the image.
+Tekan tombol <strong>Analyze image</strong> untuk memulai proses analisis gambar.
 <br><br>
-URL Picture:
+URL gambar:
 <input type="text" name="inputImage" id="inputImage"
     value="<?php echo $url ?>" readonly />
 <button id="analyze_btn" onclick="processImage()">Analyze image</button>
