@@ -28,8 +28,7 @@ if (isset($_POST['submit'])) {
         
         var subscriptionKey = "26a26d06a0e54537b640d6c034b0d70c";
  
-        var uriBase =
-            "https://mactologyvision.cognitiveservices.azure.com/vision/v2.0/analyze";
+        var uriBase = "https://mactologyvision.cognitiveservices.azure.com/vision/v2.0/analyze";
  
         var params = {
             "visualFeatures": "Categories,Description,Color",
