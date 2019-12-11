@@ -18,6 +18,7 @@ $blobClient = BlobRestProxy::createBlobService($connectionString);
 if (isset($_POST['submit'])) {
 	$fileToUpload = strtolower($_FILES["fileToUpload"]["name"]);
 	$content = fopen($_FILES["fileToUpload"]["tmp_name"], "r");
+
 	$blobClient->createBlockBlob($containerName, $fileToUpload, $content);
 	
 }
@@ -41,7 +42,7 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 				<p class="lead">Please choose a image. and then click button <b>Upload</b>
 				<span class="border-top my-3"></span>
 			
-		<div class="mt-4 mb-2">
+		<div>
 			<form class="d-flex justify-content-lefr" action="index.php" method="post" enctype="multipart/form-data">
 				<input type="file" name="fileToUpload" required="">
 				<input type="submit" name="submit" value="Upload">
