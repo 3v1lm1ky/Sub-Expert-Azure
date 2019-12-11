@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
 <script type="text/javascript">
     function processImage() {
         
-        var subscriptionKey = "26a26d06a0e54537b640d6c034b0d70c";
+        var subscriptionKey = "7334d89b99a84e6792d4c2a943b89512";
  
         var uriBase = "https://mactologyvision.cognitiveservices.azure.com/vision/v2.0/analyze";
  
