@@ -59,7 +59,6 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 					<th>Action</th>
 				</tr>
 			</thead>
-			<tbody>
 				<?php
 				do {
 					foreach ($result->getBlobs() as $blob)
@@ -80,7 +79,6 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 					$listBlobsOptions->setContinuationToken($result->getContinuationToken());
 				} while($result->getContinuationToken());
 				?>
-			</tbody>
 		</table>
 
 	</div>
