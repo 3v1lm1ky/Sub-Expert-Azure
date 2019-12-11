@@ -8,7 +8,7 @@ use MicrosoftAzure\Storage\Blob\Models\ListBlobsOptions;
 use MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions;
 use MicrosoftAzure\Storage\Blob\Models\PublicAccessType;
 
-$connectionString = "DefaultEndpointsProtocol=https;AccountName=mactologywebapp";AccountKey="v4oZVbmnbqmLmBgiDnZGAI5jmdybXQninkBFWBPH44U+Y5xwoWzgRSLRYrkG6g/GnMqaxGeNpjPj/UupPN+iDw==";
+$connectionString = "DefaultEndpointsProtocol=https;AccountName=mactologywebapp;AccountKey=v4oZVbmnbqmLmBgiDnZGAI5jmdybXQninkBFWBPH44U+Y5xwoWzgRSLRYrkG6g/GnMqaxGeNpjPj/UupPN+iDw==";
 $containerName = "blockblobshsgmut";
 
 
